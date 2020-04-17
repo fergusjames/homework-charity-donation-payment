@@ -286,7 +286,7 @@ const App = () => {
       <h1 className="PageTitle">Donate N95 Masks for Elderly Care Homes</h1>
       <img src={mask} className="Mask" alt="N95 Mask" width="200px" />
       <p className="PageBodyText">
-      Your donation of {donationAmount} will pay for a box of 10 x
+      Your donation of {donationAmount} will pay for a box of 10 &nbsp; x &nbsp;
       <strong>N95 respirator masks</strong> to be
       delivered to help protect residents and staff in Elderly Care Homes.</p>
         <CheckoutForm />
