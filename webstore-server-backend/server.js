@@ -91,6 +91,11 @@ app.post("/webhook", async (req, res) => {
     // Fulfill any orders, e-mail receipts, etc
     // To cancel the payment after capture you will need to issue a Refund (https://stripe.com/docs/api/refunds)
     console.log("SUCCESS: Payment captured!");
+
+    // for the purposes of this example integration we will just register
+    // confirmed payments intent objects as a set of JSON strings in a log file
+    const fs = require('fs');
+    fs.appendFileSync('paid-donations-to-fulfill.txt', JSON.stringify(data.object) + "\n\n");
   } else if (eventType === "payment_intent.payment_failed") {
     console.log("ERROR: Payment failed.");
   }
