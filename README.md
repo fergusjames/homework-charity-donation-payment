@@ -23,7 +23,7 @@ The design of the UI came initially from the [Stripe React examples](https://git
 
 The web UX that is built in this example integration looks like this:
 <p align="center">
-<img src="https://raw.githubusercontent.com/stripe/stripe-ios/11d293baa9b753234816367a5bbdc4ac5ad04af6/card-field.gif" width="300" height="56" alt="STPPaymentCardTextField" align="center">
+<img src="https://raw.githubusercontent.com/fergusjames/stripe-pm-exercise/master/docs/app-form-blank.png" alt="UX of the donation form" align="center">
 </p>
 
 <a name="installing"></a>
