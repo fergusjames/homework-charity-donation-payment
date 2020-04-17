@@ -32,18 +32,18 @@ The web UX that is built in this example integration looks like this:
 
 When a payment has been successful the customer is informed.
 <p align="center">
-<img src="https://raw.githubusercontent.com/fergusjames/stripe-pm-exercise/master/docs/app-form-blank.png?token=APCPWGE63UTR7R5TQLNE37S6TIH6I" width=300 alt="UX of the blank donation form" align="center">
+<img src="https://github.com/fergusjames/stripe-pm-exercise/blob/master/docs/app-form-blank.png?raw=true" width=300 alt="UX of the blank donation form" align="center">
 </p>
 
 When a payment has been successful the customer is informed.
 <p align="center">
-<img src="https://raw.githubusercontent.com/fergusjames/stripe-pm-exercise/master/docs/app-form-success.png?token=APCPWGGC6DE4UCRZAQBMNRC6TIJ74" width=300 alt="UX showing a successfully completed payment" align="center">
+<img src="https://github.com/fergusjames/stripe-pm-exercise/blob/master/docs/app-form-success.png?raw=true" width=300 alt="UX showing a successfully completed payment" align="center">
 </p>
 
 And if any errors occur either when filling out the payment form or after trying the payment through the Stripe service then the customer will be told and prompted to correct them where possible.
 <p align="center">
-<img src="https://raw.githubusercontent.com/fergusjames/stripe-pm-exercise/master/docs/app-form-error.png?token=APCPWGFCIHCWRSS2A66WRF26TIKWC" width=300 alt="UX showing a failed payment" align="center">
-<img src="https://raw.githubusercontent.com/fergusjames/stripe-pm-exercise/master/docs/app-form-missing-field.png?token=APCPWGGCCJ3LBAIYFYJHR7S6TIKXU" width=300 alt="UX showing a incomplete payment form" align="center">
+<img src="https://github.com/fergusjames/stripe-pm-exercise/blob/master/docs/app-form-error.png?raw=true" width=300 alt="UX showing a failed payment" align="center">
+<img src="https://github.com/fergusjames/stripe-pm-exercise/blob/master/docs/app-form-missing-field.png?raw=true" width=300 alt="UX showing a incomplete payment form" align="center">
 </p>
 
 <a name="architecture"></a>
