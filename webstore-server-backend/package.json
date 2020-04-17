@@ -1,0 +1,17 @@
+{
+  "name": "webstore-server-side",
+  "version": "1.0.0",
+  "description": "Stub backend for our sample webstore. Will be called when a purchase checkout and payment through Stripe has succeeded. So normally we would put our code here to fulfill the customer's order. In this stub we will just log the order and, more importantly, the \"payment succeeded\" confirmation from Stripe to a logfile.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Fergus O'Reilly",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "stripe": "^8.41.0"
+  }
+}

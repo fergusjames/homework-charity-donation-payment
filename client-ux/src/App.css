@@ -1,0 +1,38 @@
+/* using a Google font for the text on the page
+ */
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,900');
+
+/* custom transition animations, used for animating the mask image
+ * this comes with the default React App install and wazs reused here
+ */
+https://s3-us-west-2.amazonaws.com/s.cdpn.io/78060/animate.min.css
+
+.Mask {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .Mask {
+    animation: Mask-spin infinite 40s linear;
+  }
+}
+
+.PageTitle {
+  font-family: 'Lato', sans-serif;
+  color: rgb(240,240,240);;
+}
+
+.PageBodyText {
+  font-family: 'Lato', sans-serif;
+  color : rgb(230,230,230);
+}
+
+@keyframes Mask-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
