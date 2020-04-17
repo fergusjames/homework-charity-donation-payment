@@ -23,7 +23,7 @@ The design of the UI came initially from the [Stripe React examples](https://git
 
 The web UX that is built in this example integration looks like this:
 <p align="center">
-<img src="https://raw.githubusercontent.com/fergusjames/stripe-pm-exercise/master/docs/app-form-blank.png" alt="UX of the donation form" align="center">
+<img src="https://raw.githubusercontent.com/fergusjames/stripe-pm-exercise/master/docs/app-form-blank.png?token=APCPWGE63UTR7R5TQLNE37S6TIH6I" alt="UX of the donation form" align="center">
 </p>
 
 <a name="installing"></a>
