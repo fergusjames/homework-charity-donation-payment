@@ -1,7 +1,6 @@
 # Stripe PaymentIntent integration example
 
-This is a sample Stripe PaymentIntent integration for the web. Built to
-fulfill the requirements of a Stripe Product Management homework exercise.
+This is a sample Stripe PaymentIntent integration for the web.
 
 The integration was built following the [Stripe Docs on how to Accept a
 Payment for the web](https://stripe.com/docs/payments/accept-a-payment#web).
