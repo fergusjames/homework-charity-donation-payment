@@ -78,23 +78,67 @@ This means that the Charity's server can more easily maintain compliance with th
 1. You will need to setup a Stripe account to execute the code in this example integration. [Start with Stripe here](https://stripe.com/en-fr/get-started).
 2. The code here is built and managed in the [Node.js](https://nodejs.org) framework along with the [npm](https://www.npmjs.com) package manager. If you do not already have these installed then do so by following [the instructions to install Node.js](https://nodejs.org/en/download/) for your local machine environment. Installing Node.js should also install the npm package manager.
 3. Use [GitHub](https://help.github.com) (where this code repository is located) and the related tools like [GitHub Desktop](https://help.github.com/desktop) to clone and download this repository to the local machine where you will be executing the example integration.
-4. Stripe provides a command-line interpreter (CLI) that we will use to connect our local machine environment  to stripe and in particular to easily relay the Stripe server webhook callbacks to our local machine while we are testing. Install the Stripe CLI to your local machine by [following these instructions](https://stripe.com/docs/stripe-cli#install).
+4. Stripe provides a command-line interpreter (CLI) that we will use to connect our local machine environment to the Stripe service and in particular to easily relay the Stripe server webhook callbacks to our local machine while we are testing. Install the Stripe CLI to your local machine by [following these instructions](https://stripe.com/docs/stripe-cli#install).
 5. Next [link the Stripe CLI](https://stripe.com/docs/stripe-cli#link-account) to your Stripe account.
 6. Now you will need to customize two different `.env` files and load into them your secure keys from your Stripe account.
 7. Go to your [Stripe Dashboard](https://dashboard.stripe.com/test/apikeys) to lookup your developer API keys. Make sure you are viewing the test data keys, not your live keys for production. You should see two tokens for *Publishable key* and *Secret key*. Note these tokens.
 8. Run the Stripe CLI using the command [`stripe listen`](https://stripe.com/docs/stripe-cli#listen-for-events) which will reveal your *webhook signing secret*. Note this token too.
 9. Use a text-editor to edit the `.env` file in the directory `webstore-server-backend`. Replace the entries for both the *Publishable key* and the *Secret key* with the tokens you obtained from your Stripe Dashboard. And replace the entry for the *webhook signing secret* with the one you got from the Stripe CLI tool.
-10. Now move to the directory `client-ux` directory and use a text-editor to edit the separate `.env` file in there. Replace the entries for the *Publishable key*  with the token you obtained from your Stripe Dashboard.
+10. Now move to the `client-ux` directory and use a text-editor to edit the separate `.env` file in there. Replace the entries for the *Publishable key*  with the token you obtained from your Stripe Dashboard.
 11. Now we are going to properly install the full Node.js packages required to run both the React app for the Customer User Experience and the Express app for the Webstore backend server.
 12. In a terminal window on your local machine, change to the `webstore-server-backend` directory and run the command
+
     npm install
 
 13. Then change to the `client-ux` directory and similarly run the command:
+
     npm install
 
-That completes the installation.
+14. Running those two commands will properly download all the dependent packages used to make the example work properly.
+
+Phew! That completes the installation. Well done!
 
 <a name="running"></a>
 ## Running
 
-Running instructions
+To run the example integration you need to run three separate things on your local machine. Open up three separate terminal windows for this.
+
+###Start the Webstore Server backend
+In the terminal window change to the `webstore-server-backend` directory and run the command
+
+    npm start
+
+###Start the Stripe CLI
+In a second terminal window run the command
+
+    stripe listen --forward-to http://localhost:4242/webhook
+
+The Stripe CLI will now communicate with the Stripe service and forward any webhook callbacks to your local webstore server backend.
+
+###Start the Customer Experience application
+Finally, in a third terminal window change to the `client-ux` directory and run the command
+
+    npm start
+
+Normally, starting this application should automatically trigger your web browser to open to the page `http://localhost:3000` if not then visit this page manually in your browser and you should see the donation form:
+
+<p align="center">
+<img src="https://github.com/fergusjames/stripe-pm-exercise/blob/master/docs/app-form-blank.png?raw=true" width=300 alt="UX of the donation form" align="center">
+</p>
+
+<a name="testing"></a>
+## Testing
+Use the [Stripe-provided test credit card numbers](https://stripe.com/docs/payments/accept-a-payment#web-test-integration) to test the form under different test scenarios.
+
+You can use any name, email address and phone number.
+
+The Stripe test credit card numbers all work for any future expiration date, CVC and postal code values.
+
+Submit your payments and check whether they succeed or fail according to the Stripe test scenarios.
+
+Go to your [Stripe Dashboard](https://dashboard.stripe.com/test/payments) to see a list of the payment attempts and their status.
+
+Finally, a local register log of all successful payments is stored in the `webstore-server-backend` directory in a file called `paid-donations-to-fulfill.txt` in [JSON format](https://www.json.org).
+
+##Thanks!
+❤️Thank-you for testing out this example PaymentIntent integration. And thanks to Stripe for making it all possible with their easy-to-use service and documentation.
