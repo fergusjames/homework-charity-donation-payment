@@ -148,5 +148,6 @@ Go to your [Stripe Dashboard](https://dashboard.stripe.com/test/payments) to see
 
 Finally, a local register log of all successful payments is stored in the `webstore-server-backend` directory in a file called `paid-donations-to-fulfill.txt` in [JSON format](https://www.json.org).
 
-##Thanks!
+## Thanks!
+
 ❤️Thank-you for testing out this example PaymentIntent integration. And thanks to Stripe for making it all possible with their easy-to-use service and documentation.
