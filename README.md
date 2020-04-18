@@ -80,8 +80,18 @@ This means that the Charity's server can more easily maintain compliance with th
 3. Use [GitHub](https://help.github.com) (where this code repository is located) and the related tools like [GitHub Desktop](https://help.github.com/desktop) to clone and download this repository to the local machine where you will be executing the example integration.
 4. Stripe provides a command-line interpreter (CLI) that we will use to connect our local machine environment to the Stripe service and in particular to easily relay the Stripe server webhook callbacks to our local machine while we are testing. Install the Stripe CLI to your local machine by [following these instructions](https://stripe.com/docs/stripe-cli#install).
 5. Next [link the Stripe CLI](https://stripe.com/docs/stripe-cli#link-account) to your Stripe account.
-6. Now you will need to customize two different `.env` files and load into them your secure keys from your Stripe account.
-7. Go to your [Stripe Dashboard](https://dashboard.stripe.com/test/apikeys) to lookup your developer API keys. **Make sure you are viewing the test data keys, not your live keys for production**. You should see two tokens for *Publishable key* and *Secret key*. Note these tokens.
+6. Now you will need to customize two different `.env` files and load into them your secure keys from your Stripe account. Templates are provided for you to copy.
+
+Go to the `webstore-server-backend` directory and copy the template `.env` file:
+```
+    cp .env-example-webstore-server-backend .env
+```
+
+Similarly go to the `client-ux` directory and copy the template `.env` file:
+```
+    cp .env-example-client-ux .env
+```
+7. Now go to your [Stripe Dashboard](https://dashboard.stripe.com/test/apikeys) to lookup your developer API keys. **Make sure you are viewing the test data keys, not your live keys for production**. You should see two tokens for *Publishable key* and *Secret key*. Note these tokens.
 8. Run the Stripe CLI using the command [`stripe listen`](https://stripe.com/docs/stripe-cli#listen-for-events) which will reveal your *webhook signing secret*. Note this token too.
 9. Use a text-editor to edit the `.env` file in the directory `webstore-server-backend`. Replace the entries for both the *Publishable key* and the *Secret key* with the tokens you obtained from your Stripe Dashboard. And replace the entry for the *webhook signing secret* with the one you got from the Stripe CLI tool.
 10. Now move to the `client-ux` directory and use a text-editor to edit the separate `.env` file in there. Replace the entries for the *Publishable key*  with the token you obtained from your Stripe Dashboard.
