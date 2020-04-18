@@ -123,7 +123,7 @@ Finally, in a third terminal window change to the `client-ux` directory and run 
 ```
     npm start
 ```
-Normally, starting this application should automatically trigger your web browser to open to the page `http://localhost:3000` if not then visit this page manually in your browser and you should see the donation form:
+Normally, starting this application should automatically trigger your web browser to open to the page http://localhost:3000 if not then visit this page manually in your browser and you should see the donation form:
 
 <p align="center">
 <img src="https://github.com/fergusjames/stripe-pm-exercise/blob/master/docs/app-form-blank.png?raw=true" width=300 alt="UX of the donation form" align="center">
