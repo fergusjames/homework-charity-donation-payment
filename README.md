@@ -103,13 +103,13 @@ Phew! That completes the installation. Well done!
 
 To run the example integration you need to run three separate things on your local machine. Open up three separate terminal windows for this.
 
-###Start the Webstore Server backend
+### Start the Webstore Server backend
 
 In the terminal window change to the `webstore-server-backend` directory and run the command
 ```
     npm start
 ```
-###Start the Stripe CLI
+### Start the Stripe CLI
 
 In a second terminal window run the command
 ```
@@ -117,7 +117,7 @@ In a second terminal window run the command
 ```
 The Stripe CLI will now communicate with the Stripe service and forward any webhook callbacks to your local webstore server backend.
 
-###Start the Customer Experience application
+### Start the Customer Experience application
 
 Finally, in a third terminal window change to the `client-ux` directory and run the command
 ```
