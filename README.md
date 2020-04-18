@@ -75,6 +75,8 @@ This means that the Charity's server can more easily maintain compliance with th
 <a name="installing"></a>
 ## Installing
 
+**Caveat:** These instructions were written using macOS as the target local machine where the example integration would be installed and run. They should work on most other environments that support Node.js, with the possible exception of some terminal commands that will have to be adapted.
+
 1. You will need to setup a Stripe account to execute the code in this example integration. [Start with Stripe here](https://stripe.com/en-fr/get-started).
 2. The code here is built and managed in the [Node.js](https://nodejs.org) framework along with the [npm](https://www.npmjs.com) package manager. If you do not already have these installed then do so by following [the instructions to install Node.js](https://nodejs.org/en/download/) for your local machine environment. Installing Node.js should also install the npm package manager.
 3. Use [GitHub](https://help.github.com) (where this code repository is located) and the related tools like [GitHub Desktop](https://help.github.com/desktop) to clone and download this repository to the local machine where you will be executing the example integration.
