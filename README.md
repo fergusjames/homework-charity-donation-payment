@@ -22,9 +22,9 @@ We will build a simple one-time payment for a donation of a fixed amount to a ch
 This charity will use the funds to donate personal protective equipment to
 care homes for the elderly.
 
-The simple design of the user experience here came initially from the [Stripe React examples](https://github.com/stripe/react-stripe-js).
+The simple design of the user interface here came initially from the [Stripe React examples](https://github.com/stripe/react-stripe-js).
 
-The web customer experience that is built in this example integration looks like this:
+The web customer user interface that is built in this example integration looks like this:
 <p align="center">
 <img src="https://github.com/fergusjames/stripe-pm-exercise/blob/master/docs/app-form-blank.png?raw=true" width=300 alt="UX of the donation form" align="center">
 </p>
@@ -44,7 +44,7 @@ And if any errors occur either when filling out the payment form or after trying
 ## Architecture
 
 The example payment integration is built using [Node.js](https://nodejs.org) and split into two parts:
-1. The customer payment user experience which is built as a single-page web application using [React](https://reactjs.org).
+1. The customer payment user interface which is built as a single-page web application using [React](https://reactjs.org).
 2. A webstore server backend for the charity which is built as a web application using the [Express](https://expressjs.com) framework.
 
 These two elements both communicate with the Stripe service using the [Stripe APIs](https://stripe.com/docs/api).
@@ -56,7 +56,7 @@ Successful donations to the charity are logged to a flat text file in [JSON form
 <img src="https://github.com/fergusjames/stripe-pm-exercise/blob/master/docs/architecture-sequence-diagram.png?raw=true" width=700 alt="High-level sequence diagram showing flow among components" align="center">
 </p>
 
-* The React app loads the user experience for the donation form from the charity's server and the logic runs in the customer's browser.
+* The React app loads the user interface for the donation form from the charity's server and the logic runs in the customer's browser.
 * Note that the part of the form that captures the customer's credit card details
 is served within a iFrame directly from the Stripe service. This protects the customer's
 credit card details. The customer's credit card details never touch the charity's servers.
@@ -99,7 +99,7 @@ Similarly go to the `client-ux` directory and copy the template `.env` file:
 8. Run the Stripe CLI using the command [`stripe listen`](https://stripe.com/docs/stripe-cli#listen-for-events) which will reveal your *webhook signing secret*. Note this token too.
 9. Use a text-editor to edit the `.env` file in the directory `webstore-server-backend`. Replace the entries for both the *Publishable key* and the *Secret key* with the tokens you obtained from your Stripe Dashboard. And replace the entry for the *webhook signing secret* with the one you got from the Stripe CLI tool.
 10. Now move to the `client-ux` directory and use a text-editor to edit the separate `.env` file in there. Replace the entries for the *Publishable key*  with the token you obtained from your Stripe Dashboard.
-11. Now we are going to properly install the full Node.js packages required to run both the React app for the Customer User Experience and the Express app for the Webstore server backend.
+11. Now we are going to properly install the full Node.js packages required to run both the React app for the customer user interface and the Express app for the webstore server backend.
 12. In a terminal window on your local machine, change to the `webstore-server-backend` directory and run the command
 ```
     npm install
@@ -131,7 +131,7 @@ In a second terminal window run the command
 ```
 The Stripe CLI will now communicate with the Stripe service and forward any webhook callbacks to your local webstore server backend.
 
-### Start the Customer Experience application
+### Start the Customer User Interface application
 
 Finally, in a third terminal window change to the `client-ux` directory and run the command
 ```
